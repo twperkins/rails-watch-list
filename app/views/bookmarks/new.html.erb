@@ -1,0 +1,11 @@
+<h1>Add a Bookmark to <%= @list.name %></h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit :add %>
+<% end %>
+
+<%= link_to "back", list_path(@list) %>
