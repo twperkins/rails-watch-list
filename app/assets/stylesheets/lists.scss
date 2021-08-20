@@ -4,6 +4,48 @@
 
 .header {
   height: 200px;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://source.unsplash.com/2uwFEAGUm6E");
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://source.unsplash.com/dTLlhgeEJWg/2560x1600");
   background-size: cover;
+  background-position: center;
+  padding-left: 32px;
+  padding-top: 75px;
+  margin-bottom: 64px;
+  border-bottom: solid 8px rgb(39, 39, 39);
+  .header-text {
+    color: white;
+    font-size: 3em;
+    letter-spacing: 8px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-weight: 100;
+  }
+  .header-button {
+    color: white;
+    font-size: 1em;
+    border-left: solid 0.5px rgba(255, 255, 255, 0.4);
+    border-right: solid 0.5px rgba(255, 255, 255, 0.4);
+    padding: 4px;
+    border-radius: 2px;
+    transition: 0.3s;
+    &:hover {
+      text-decoration: none;
+      border-left: solid 0.5px rgba(255, 255, 255, 0.9);
+      border-right: solid 0.5px rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 32px;
+  row-gap: 32px;
+  column-gap: 32px;
+}
+
+.section-head {
+  margin: 32px;
+  width: 60%;
+  text-align: left;
+  border-bottom: solid 1px grey;
 }

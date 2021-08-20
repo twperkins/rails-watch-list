@@ -25,8 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
-gem 'validate_url'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.18.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

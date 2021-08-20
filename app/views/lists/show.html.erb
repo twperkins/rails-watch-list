@@ -13,7 +13,7 @@
       <h3><%= bookmark.movie.title %></h3>
       <p><%= bookmark.movie.overview %></p>
       <p><%= bookmark.movie.rating %></p>
-      <%= link_to "remove", list_bookmark_path(bookmark), method: 'delete' %>
+      <%= link_to "remove", list_bookmark_path(@list, bookmark), method: 'delete' %>
     </div>
   <% end %>
 <% end %>
