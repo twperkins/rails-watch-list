@@ -1,5 +1,5 @@
 <h1><%= @list.name %> Movies</h1>
-<%= link_to "add bookmark", new_list_bookmark_path(@list) %>
+<%= link_to "add movie", new_list_bookmark_path(@list) %>
 <%= link_to "back", lists_path %>
 
 <h2>Movies</h3>
@@ -9,7 +9,7 @@
 <% else %>
   <% @list.bookmarks.each do |bookmark| %>
     <div class="movie-card">
-      <%= image_tag bookmark.movie.poster_url %></p>
+      <%= image_tag bookmark.movie.poster_url %>
       <h3><%= bookmark.movie.title %></h3>
       <p><%= bookmark.movie.overview %></p>
       <p><%= bookmark.movie.rating %></p>

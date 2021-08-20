@@ -1,7 +1,11 @@
-<h1>Movie Lists</h1>
+<div class="header">
+  <h1>Movie Lists</h1>
+</div>
 
 <%= link_to "create list", new_list_path %>
 
 <% @lists.each do |list| %>
-  <h3><%= link_to list.name, list_path(list) %></h3>
+  <div class="category-card" style="background-image: url(<%= list.image_url %>)">
+    <h3><%= link_to list.name, list_path(list) %></h3>
+  </div>
 <% end %>
