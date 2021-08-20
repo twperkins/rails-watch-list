@@ -1,10 +1,10 @@
-<div class="header">
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/dTLlhgeEJWg/2560x1600')";>
   <h1 class="header-text">&nbsp;movies &nbsp;&nbsp;&nbsp;</h1>
   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "create list", new_list_path, class: 'header-button' %></p>
 </div>
 
 <h2 class="section-head">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Categories</h2>
-<div class="grid">
+<div class="categories-grid">
   <% @lists.each do |list| %>
     <div class="category-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= cl_image_path list.image_url.key, crop: :fill %>)">
       <h3><%= link_to list.name, list_path(list), class: "category-title" %></h3>

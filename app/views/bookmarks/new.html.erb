@@ -1,11 +1,14 @@
-<h1>Add a Movie to <%= @list.name %></h1>
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/dTLlhgeEJWg/2560x1600')";>
+  <h1 class="header-text">&nbsp;add to <%= @list.name.downcase %> &nbsp;&nbsp;&nbsp;</h1>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "back", list_path(@list), class: "header-button" %></p>
+</div>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.association :movie %>
-  <%= f.input :comment %>
-  <%= f.submit :add %>
-<% end %>
-
-<%= link_to "back", list_path(@list) %>
+<div class="form">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit :add, class: "btn btn-outline-dark" %>
+  <% end %>
+</div>

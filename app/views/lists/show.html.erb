@@ -1,19 +1,25 @@
-<h1><%= @list.name %> Movies</h1>
-<%= link_to "add movie", new_list_bookmark_path(@list) %>
-<%= link_to "back", root_path %>
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%= cl_image_path @list.image_url.key, crop: :fill %>)">
+  <h1 class="header-text">&nbsp;<%= @list.name.downcase %> &nbsp;&nbsp;&nbsp;</h1>
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "add movie", new_list_bookmark_path(@list), class: "header-button" %>
+  &nbsp;<%= link_to "back", root_path, class: "header-button" %></span>
+</div>
 
-<h2>Movies</h3>
+<h2 class="section-head">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Movies</h2>
 
-<% if @list.bookmarks.blank? %>
-  <p>No movies yet</p>
-<% else %>
-  <% @list.bookmarks.each do |bookmark| %>
-    <div class="movie-card">
-      <%= image_tag bookmark.movie.poster_url %>
-      <h3><%= bookmark.movie.title %></h3>
-      <p><%= bookmark.movie.overview %></p>
-      <p><%= bookmark.movie.rating %></p>
-      <%= link_to "remove", list_bookmark_path(@list, bookmark), method: 'delete' %>
-    </div>
+<div class="movies-grid">
+  <% if @list.bookmarks.blank? %>
+    <p>&nbsp;&nbsp;no movies yet...</p>
+  <% else %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="movie-card">
+        <%= image_tag bookmark.movie.poster_url, class: "movie-image" %>
+        <h3 class="movie-title"><%= bookmark.movie.title %></h3>
+        <p class="movie-overview"><%= bookmark.movie.overview %></p>
+        <div class="flex">
+          <p class="movie-rating"><%= bookmark.movie.rating %>/10.0</p>
+          <%= link_to "remove", list_bookmark_path(@list, bookmark), method: 'delete', class: "button" %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>

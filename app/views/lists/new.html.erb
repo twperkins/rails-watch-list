@@ -1,11 +1,14 @@
-<h1>Create a Movie List</h1>
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/dTLlhgeEJWg/2560x1600')";>
+  <h1 class="header-text">&nbsp;create a list &nbsp;&nbsp;&nbsp;</h1>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "back", root_path, class: "header-button" %></p>
+</div>
 
-<%= simple_form_for(@list) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-  <%= f.input :name %>
-  <%= f.input :image_url, as: :file %>
-  <%= f.submit :save %>
-<% end %>
-
-<%= link_to "back", root_path %>
+<div class="form">
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :name %>
+    <%= f.input :image_url, as: :file %>
+    <%= f.submit :save, class: "btn btn-outline-dark" %>
+  <% end %>
+</div>

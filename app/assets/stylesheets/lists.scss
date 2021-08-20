@@ -4,7 +4,6 @@
 
 .header {
   height: 200px;
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("https://source.unsplash.com/dTLlhgeEJWg/2560x1600");
   background-size: cover;
   background-position: center;
   padding-left: 32px;
@@ -35,7 +34,7 @@
   }
 }
 
-.grid {
+.categories-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 32px;
@@ -48,4 +47,12 @@
   width: 60%;
   text-align: left;
   border-bottom: solid 1px grey;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 32px;
+  row-gap: 32px;
+  column-gap: 32px;
 }
