@@ -14,7 +14,7 @@
       <div class="movie-card">
         <%= image_tag bookmark.movie.poster_url, class: "movie-image" %>
         <h3 class="movie-title"><%= bookmark.movie.title %></h3>
-        <p class="movie-overview"><%= bookmark.movie.overview %></p>
+        <p class="movie-overview"><%= bookmark.movie.overview.truncate(150) %></p>
         <div class="flex">
           <p class="movie-rating"><%= bookmark.movie.rating %>/10.0</p>
           <%= link_to "remove", list_bookmark_path(@list, bookmark), method: 'delete', class: "button" %>

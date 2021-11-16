@@ -6,6 +6,9 @@
   height: 200px;
   background-size: cover;
   background-position: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   padding-left: 32px;
   padding-top: 75px;
   margin-bottom: 64px;
@@ -55,4 +58,5 @@
   margin: 32px;
   row-gap: 32px;
   column-gap: 32px;
+  padding-bottom: 32px;
 }
