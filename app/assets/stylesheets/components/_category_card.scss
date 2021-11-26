@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   box-shadow: 6px 6px 8px rgba(0, 0, 0, 0);
-  transition: 0.3s;
+  transition: 0.5s;
   &:hover {
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.6);
   }
@@ -15,7 +15,7 @@
     padding-left: 88px;
     border-top: solid 0.5px rgba(255, 255, 255, 0);
     border-bottom: solid 0.5px rgba(255, 255, 255, 0);
-    transition: 0.3s;
+    transition: 0.5s;
     &:hover {
       text-decoration: none;
       border-top: solid 0.5px rgba(255, 255, 255, 0.4);
